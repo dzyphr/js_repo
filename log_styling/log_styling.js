@@ -38,7 +38,7 @@ const misc =
 
 function styleLog(style, text)
 {
-	var out = style + text + misc["reset"];
+	const out = style + text + misc["reset"];
 	console.log(out);
 }
 

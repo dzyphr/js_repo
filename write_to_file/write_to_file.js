@@ -1,12 +1,14 @@
-const fs = require('fs');
-let fileContents = "test data";
-let fileName = "yourFileName";
-let extention = ".txt";
-fileName = fileName + extention;
-fs.writeFile
-(
-	fileName, fileContents, (err) =>
-	{
-		if (err) throw err;
-	}
-)
+function writeToFile(fileName, extention, fileContents)
+{
+	const fs = require('fs');
+	fileName = fileName + extention;
+	fs.writeFile
+	(
+		fileName, fileContents, (err) =>
+		{
+			if (err) throw err;
+		}
+	)
+}
+
+writeToFile("myFile", ".txt", "\ntestdata\n");
